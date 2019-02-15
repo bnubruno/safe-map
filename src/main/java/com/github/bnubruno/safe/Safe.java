@@ -19,8 +19,8 @@ public class Safe {
 		return object.map( getAttribute ).orElse( defaultValue );
 	}
 
-	public static <I, O> I safeMap(Optional<O> object, Function<O, I> getAttribute) {
-		return safeMap( object, getAttribute, (I) null );
+	public static <O, I> O safeMap(Optional<I> object, Function<I, O> getAttribute) {
+		return safeMap( object, getAttribute, (O) null );
 	}
 
 }
